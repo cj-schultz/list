@@ -1,0 +1,18 @@
+<ul id="groups">
+  <% @groups.each do |group| %>
+    <li>
+      <article class="group">
+        <header>
+          <h2>
+            <%= link_to group.title, group_tasks_path(group) %>    
+          </h2>
+        </header>
+        <p>
+          <%= pluralize(pending_tasks(group).count, "Pending Task") %>
+        </p>
+          <%= link_to "Edit Group", edit_group_path(group), class: 'button' %>
+          <%= link_to "Delete Group", group, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+      </article>
+    </li>
+  <% end %>
+</ul>

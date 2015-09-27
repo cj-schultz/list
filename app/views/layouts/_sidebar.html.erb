@@ -1,0 +1,27 @@
+<aside id="sidebar">
+	<nav>
+	  <ul>
+	    <li class="all-groups">
+	      <%= link_to "All Groups", groups_url, class: "button" %>
+	    </li>
+	    <li class="create-group">
+	      <%= link_to "Add New Group", new_group_url, class: "button" %>
+	    </li>
+	  </ul>
+	</nav>
+	<div id="todays-tasks">
+		<% if current_user %>
+			<% todays_tasks = gather_tasks(current_user) %>
+			<h3> Today's Tasks </h3>
+			<% if todays_tasks.size > 0 %>			
+				<ul>
+					<% todays_tasks.each do |task| %>
+						<li><%= link_to task.title, group_task_path(task.group, task) %> (<%= task.group.title %>)</li>
+					<% end %>
+				</ul>
+			<% else %>
+				<h3 class="none">None</h3>
+			<% end %>
+		<% end %>
+	</div>
+</aside>

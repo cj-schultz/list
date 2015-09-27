@@ -1,0 +1,70 @@
+<header>
+  <h1>
+    <%= @group.title %>
+  </h1>
+  <%= link_to "Add Task", new_group_task_path(@group), class: 'button' %>
+<header>
+
+<% if @pending_tasks.count > 0 %>
+  <h2> <%= pluralize @pending_tasks.count, "Pending Task" %> </h2>
+
+  <%= form_tag 'complete/tasks', :method => :put do %>
+    <ul id="tasks">
+      <% @pending_tasks.each do |task| %>
+        <li>
+          <article class="task">
+            <header>
+              <h2>
+                <%= link_to task.title, group_task_path(@group, task) %> <%= check_box_tag "task_ids[]", task.id %>
+              </h2>
+            </header>
+            <p>
+              <%= truncate(task.description, length: 150, separator: ' ') %>
+            </p>
+            <table>
+              <tr>
+                <th> Due Date </th>
+                <% if task.overdue? %>
+                <td class="red"><%= task.due_date %></td>
+                <% elsif task.due_today? %>
+                <td class="yellow"><%= task.due_date %></td>
+                <% else %>
+                <td><%= task.due_date %></td>
+                <% end %>
+              </tr>
+            </table>
+          </article>
+        </li>
+      <% end %>
+      <%= submit_tag "Complete Selected Tasks" %>
+    </ul>
+  <% end %>
+<% end %>
+
+<% if @completed_tasks.count > 0 %>
+  <h2> <%= pluralize(@completed_tasks.count, "Completed Task") %> </h2>
+
+  <ul id="tasks">
+    <% @completed_tasks.each do |task| %>
+      <li>
+        <article class="task">
+          <header>
+            <h2>
+              <%= link_to task.title, group_task_path(@group, task) %>
+            </h2>
+          </header>
+          <p>
+            <%= truncate(task.description, length: 150, separator: ' ') %>
+          </p>
+          <table>
+            <tr>
+              <th> Due Date </th>
+              <td><%= task.due_date %></td>
+            </tr>
+          </table>
+        </article>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+

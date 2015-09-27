@@ -1,0 +1,20 @@
+<h1><%= @task.title %> in <%= link_to @group.title, group_tasks_path(@group) %></h1>
+
+<article id="task">
+	<p><%= @task.description %></p>	
+    <table>
+      <tr>
+      	<th> Status </th>
+      	<td> <%= format_completion(@task) %> </td>
+      </tr>
+      <tr>
+        <th> Due Date </th>
+        <td><%= @task.due_date %></td>
+      </tr>
+    </table> 
+</article>
+
+<footer>
+  <%= link_to 'Edit Task', edit_group_task_path(@group, @task), class: 'button' %>
+  <%= link_to 'Delete Task', group_task_path(@group, @task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+</footer>

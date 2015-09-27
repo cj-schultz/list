@@ -1,0 +1,15 @@
+<%= form_for(@group) do |f| %>
+  <%= render 'shared/errors', object: @group %>
+  <fieldset>
+    <ol>
+      <li class="required">
+        <%= f.label :title %>
+        <%= f.text_field :title, autofocus: true %>
+      </li>
+    </ol>
+    <p>
+      <%= f.submit %>
+      <%= link_to "Cancel", session[:previous_url], class: 'button' %>
+    </p>
+  </fieldset>
+<% end %>
