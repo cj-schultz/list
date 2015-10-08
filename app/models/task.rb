@@ -5,6 +5,9 @@ class Task < ActiveRecord::Base
 
   validates :due_date, presence: true
 
+  scope :pending, ->(group) { where(group_id: group.id).where(complete: false).order(:due_date) }
+  scope :complete, ->(group) { where(group_id: group.id).where(complete: true).order(:due_date) }
+
   def due_today?
   	due_date == Date.today
   end

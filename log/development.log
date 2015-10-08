@@ -67318,3 +67318,810 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-09-26 23:48:42 -0400
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-26 23:48:42 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 17:57:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (18.9ms)[0m  [1mSELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  [["group_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'[0m  [["group_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  [["group_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'[0m  [["group_id", 4]]
+  Rendered groups/index.html.erb within layouts/application (89.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_flashes.html.erb (0.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?  [["user_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 2]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 3]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (13.3ms)
+Completed 200 OK in 587ms (Views: 411.3ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/logo1.png" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-10-07 17:57:38 -0400
+
+
+Started GET "/users" for 127.0.0.1 at 2015-10-07 17:58:18 -0400
+Processing by UsersController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_flashes.html.erb (0.6ms)
+  [1m[35mGroup Load (0.2ms)[0m  SELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?  [["user_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 2]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 3]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (6.8ms)
+Completed 200 OK in 85ms (Views: 83.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/groups/2/tasks" for 127.0.0.1 at 2015-10-07 17:58:31 -0400
+Processing by TasksController#index as HTML
+  Parameters: {"group_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'[0m  [["group_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  [["group_id", 2]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  ORDER BY "tasks"."due_date" ASC[0m  [["group_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  [["group_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'[0m  [["group_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 't'  [["group_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 't'[0m  [["group_id", 2]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 't'  ORDER BY "tasks"."due_date" ASC  [["group_id", 2]]
+  Rendered tasks/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (5.1ms)
+Completed 200 OK in 151ms (Views: 145.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 21:11:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 132ms
+
+SyntaxError (/Users/colinschultz/Desktop/projects/list/app/models/group.rb:8: syntax error, unexpected ':', expecting keyword_end
+  scope: pending, -> { tasks.where(co...
+        ^
+/Users/colinschultz/Desktop/projects/list/app/models/group.rb:8: syntax error, unexpected ';', expecting :: or '[' or '.'
+/Users/colinschultz/Desktop/projects/list/app/models/group.rb:9: syntax error, unexpected ';', expecting :: or '[' or '.'):
+  app/models/group.rb:8: syntax error, unexpected ':', expecting keyword_end
+  app/models/group.rb:8: syntax error, unexpected ';', expecting :: or '[' or '.'
+  app/models/group.rb:9: syntax error, unexpected ';', expecting :: or '[' or '.'
+  app/controllers/groups_controller.rb:49:in `set_user_groups'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 21:11:30 -0400
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/colinschultz/Desktop/projects/list/app/models/group.rb:8: syntax error, unexpected ':', expecting keyword_end
+  scope: pending, -> { tasks.where(co...
+        ^
+/Users/colinschultz/Desktop/projects/list/app/models/group.rb:8: syntax error, unexpected ';', expecting :: or '[' or '.'
+/Users/colinschultz/Desktop/projects/list/app/models/group.rb:9: syntax error, unexpected ';', expecting :: or '[' or '.'):
+  app/models/group.rb:8: syntax error, unexpected ':', expecting keyword_end
+  app/models/group.rb:8: syntax error, unexpected ';', expecting :: or '[' or '.'
+  app/models/group.rb:9: syntax error, unexpected ';', expecting :: or '[' or '.'
+  app/controllers/groups_controller.rb:49:in `set_user_groups'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 21:11:50 -0400
+Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (/Users/colinschultz/Desktop/projects/list/app/models/group.rb:8: syntax error, unexpected ':', expecting keyword_end
+  scope: pending, -> { tasks.where(complete: false).order(:due_date) }
+        ^
+/Users/colinschultz/Desktop/projects/list/app/models/group.rb:8: syntax error, unexpected '\n', expecting :: or '[' or '.'
+/Users/colinschultz/Desktop/projects/list/app/models/group.rb:9: syntax error, unexpected '\n', expecting :: or '[' or '.'):
+  app/models/group.rb:8: syntax error, unexpected ':', expecting keyword_end
+  app/models/group.rb:8: syntax error, unexpected '\n', expecting :: or '[' or '.'
+  app/models/group.rb:9: syntax error, unexpected '\n', expecting :: or '[' or '.'
+  app/controllers/groups_controller.rb:49:in `set_user_groups'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 21:12:12 -0400
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.5ms)[0m  SELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'[0m  [["group_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  [["group_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'[0m  [["group_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  [["group_id", 4]]
+  Rendered groups/index.html.erb within layouts/application (48.6ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_flashes.html.erb (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (13.2ms)
+Completed 200 OK in 436ms (Views: 360.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/logo1.png" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-10-07 21:12:13 -0400
+
+
+Started GET "/groups/1/tasks" for 127.0.0.1 at 2015-10-07 21:12:15 -0400
+
+SyntaxError (/Users/colinschultz/Desktop/projects/list/app/controllers/tasks_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+  scope: pending, ->(group) { group.t...
+        ^
+/Users/colinschultz/Desktop/projects/list/app/controllers/tasks_controller.rb:4: syntax error, unexpected ';', expecting :: or '[' or '.'
+/Users/colinschultz/Desktop/projects/list/app/controllers/tasks_controller.rb:5: syntax error, unexpected ';', expecting :: or '[' or '.'):
+  app/controllers/tasks_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/tasks_controller.rb:4: syntax error, unexpected ';', expecting :: or '[' or '.'
+  app/controllers/tasks_controller.rb:5: syntax error, unexpected ';', expecting :: or '[' or '.'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started GET "/groups/1/tasks" for 127.0.0.1 at 2015-10-07 21:12:15 -0400
+
+SyntaxError (/Users/colinschultz/Desktop/projects/list/app/controllers/tasks_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+  scope: pending, ->(group) { group.t...
+        ^
+/Users/colinschultz/Desktop/projects/list/app/controllers/tasks_controller.rb:4: syntax error, unexpected ';', expecting :: or '[' or '.'
+/Users/colinschultz/Desktop/projects/list/app/controllers/tasks_controller.rb:5: syntax error, unexpected ';', expecting :: or '[' or '.'):
+  app/controllers/tasks_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/tasks_controller.rb:4: syntax error, unexpected ';', expecting :: or '[' or '.'
+  app/controllers/tasks_controller.rb:5: syntax error, unexpected ';', expecting :: or '[' or '.'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started GET "/groups/1/tasks" for 127.0.0.1 at 2015-10-07 21:12:32 -0400
+Processing by TasksController#index as HTML
+  Parameters: {"group_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 19ms
+
+NoMethodError (undefined method `pending' for #<Group:0x007fd92da10cf8>):
+  app/controllers/tasks_controller.rb:6:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.3ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"   ORDER BY "groups"."id" ASC LIMIT 1[0m
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "groups"
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT  "groups".* FROM "groups"   ORDER BY "groups"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 5]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."complete" = 'f'  ORDER BY "tasks"."due_date" ASC[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT "groups".* FROM "groups"  WHERE "groups"."complete" = 'f'  ORDER BY "groups"."due_date" ASC
+SQLite3::SQLException: no such column: groups.complete: SELECT "groups".* FROM "groups"  WHERE "groups"."complete" = 'f'  ORDER BY "groups"."due_date" ASC
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"   ORDER BY "groups"."id" ASC LIMIT 1[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 'f'  ORDER BY "tasks"."due_date" ASC
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 't'  ORDER BY "tasks"."due_date" ASC[0m
+
+
+Started GET "/groups/1/tasks" for 127.0.0.1 at 2015-10-07 21:31:34 -0400
+Processing by TasksController#index as HTML
+  Parameters: {"group_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 'f'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 'f'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 't'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 't'[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 't'  ORDER BY "tasks"."due_date" ASC
+  Rendered tasks/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (8.7ms)
+Completed 200 OK in 131ms (Views: 107.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:35 -0400
+
+
+Started GET "/groups" for 127.0.0.1 at 2015-10-07 21:31:39 -0400
+Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  [["group_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'[0m  [["group_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  [["group_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'[0m  [["group_id", 4]]
+  Rendered groups/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?  [["user_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 2]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 3]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (6.7ms)
+Completed 200 OK in 96ms (Views: 92.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/groups/3/tasks" for 127.0.0.1 at 2015-10-07 21:31:42 -0400
+Processing by TasksController#index as HTML
+  Parameters: {"group_id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'  ORDER BY "tasks"."due_date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 't'
+  Rendered tasks/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (5.3ms)
+Completed 200 OK in 132ms (Views: 128.2ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/groups/3/complete/tasks" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+Processing by TasksController#complete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BfQ6j3vzndk7BMnNFhc3YV2nFEMUHAkW855chg++Lkg=", "task_ids"=>["31"], "commit"=>"Complete Selected Tasks", "group_id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."id" = ? LIMIT 1  [["group_id", 3], ["id", 31]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "tasks" SET "complete" = ?, "updated_at" = ? WHERE "tasks"."id" = 31  [["complete", "t"], ["updated_at", "2015-10-08 01:31:46.474640"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/groups/3/tasks
+Completed 302 Found in 28ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/groups/3/tasks" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+Processing by TasksController#index as HTML
+  Parameters: {"group_id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'  ORDER BY "tasks"."due_date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 't'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 't'
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 't'  ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  [1m[35mGroup Load (0.2ms)[0m  SELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?  [["user_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 2]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 3]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (6.2ms)
+Completed 200 OK in 87ms (Views: 82.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:46 -0400
+
+
+Started PUT "/groups/3/complete/tasks" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+Processing by TasksController#complete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BfQ6j3vzndk7BMnNFhc3YV2nFEMUHAkW855chg++Lkg=", "task_ids"=>["8"], "commit"=>"Complete Selected Tasks", "group_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."id" = ? LIMIT 1[0m  [["group_id", 3], ["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "tasks" SET "complete" = ?, "updated_at" = ? WHERE "tasks"."id" = 8[0m  [["complete", "t"], ["updated_at", "2015-10-08 01:31:51.502501"]]
+  [1m[35m (5.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/groups/3/tasks
+Completed 302 Found in 13ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/groups/3/tasks" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+Processing by TasksController#index as HTML
+  Parameters: {"group_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'  ORDER BY "tasks"."due_date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 'f'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 't'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 't'[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = 3 AND "tasks"."complete" = 't'  ORDER BY "tasks"."due_date" ASC
+  Rendered tasks/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (6.1ms)
+Completed 200 OK in 132ms (Views: 127.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-07 21:31:51 -0400
+
+
+Started GET "/groups" for 127.0.0.1 at 2015-10-07 21:38:25 -0400
+Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  [["group_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'[0m  [["group_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  [["group_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'[0m  [["group_id", 4]]
+  Rendered groups/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?  [["user_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 2]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 3]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (6.8ms)
+Completed 200 OK in 173ms (Views: 170.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups/1/tasks" for 127.0.0.1 at 2015-10-07 21:38:33 -0400
+Processing by TasksController#index as HTML
+  Parameters: {"group_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 'f'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 't'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 't'
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 't'  ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  [1m[35mGroup Load (0.1ms)[0m  SELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?  [["user_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 2]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 3]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (4.7ms)
+Completed 200 OK in 125ms (Views: 121.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/groups/1/tasks/29" for 127.0.0.1 at 2015-10-07 21:38:37 -0400
+Processing by TasksController#show as HTML
+  Parameters: {"group_id"=>"1", "id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 29]]
+  Rendered tasks/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  [1m[35mGroup Load (0.2ms)[0m  SELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?  [["user_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 2]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 3]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (6.1ms)
+Completed 200 OK in 114ms (Views: 110.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/groups/1/tasks/29" for 127.0.0.1 at 2015-10-07 21:38:42 -0400
+Processing by TasksController#show as HTML
+  Parameters: {"group_id"=>"1", "id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 29]]
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  [1m[35mGroup Load (0.1ms)[0m  SELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?  [["user_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 2]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 3]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (4.3ms)
+Completed 200 OK in 76ms (Views: 73.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/groups/1/tasks/29" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BfQ6j3vzndk7BMnNFhc3YV2nFEMUHAkW855chg++Lkg=", "group_id"=>"1", "id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 29]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 29]]
+  [1m[35m (4.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/groups/1/tasks
+Completed 302 Found in 10ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/groups/1/tasks" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+Processing by TasksController#index as HTML
+  Parameters: {"group_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 'f'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 't'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 't'
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = 1 AND "tasks"."complete" = 't'  ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  [1m[35mGroup Load (0.1ms)[0m  SELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?  [["user_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 2]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 3]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (4.5ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-10-07 21:38:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-10-07 21:38:44 -0400
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2015-10-07 21:38:44 -0400
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2015-10-07 21:38:44 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-10-07 21:38:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-07 21:38:44 -0400
+
+
+Started GET "/groups" for 127.0.0.1 at 2015-10-07 21:38:46 -0400
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'[0m  [["group_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  [["group_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'[0m  [["group_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tasks"  WHERE "tasks"."group_id" = ? AND "tasks"."complete" = 'f'  [["group_id", 4]]
+  Rendered groups/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "groups".* FROM "groups"  WHERE "groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?  [["group_id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"  WHERE "tasks"."group_id" = ?[0m  [["group_id", 4]]
+  Rendered layouts/_sidebar.html.erb (4.0ms)
+Completed 200 OK in 78ms (Views: 74.9ms | ActiveRecord: 1.1ms)

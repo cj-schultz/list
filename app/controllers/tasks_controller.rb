@@ -3,8 +3,8 @@ class TasksController < ApplicationController
 
   def index
     @group = Group.find(params[:group_id])
-    @pending_tasks = @group.tasks.where(complete: false).order(:due_date)
-    @completed_tasks = @group.tasks.where(complete: true).order(:due_date)
+    @pending_tasks = Task.pending(@group)
+    @completed_tasks = Task.complete(@group)
   end
 
   def show
