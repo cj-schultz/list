@@ -1,13 +1,18 @@
 <aside id="sidebar">
 	<nav>
-	  <ul>
-	    <li class="all-groups">
-	      <%= link_to "All Groups", groups_url, class: "button" %>
-	    </li>
-	    <li class="create-group">
-	      <%= link_to "Add New Group", new_group_url, class: "button" %>
-	    </li>
-	  </ul>
+		<table>
+			<tr>
+				<td>
+					<%= link_to "New Task", new_group_url, class: "button" %>
+				</td>
+				<td>
+					<%= link_to "New Group", new_group_url, class: "button" %>
+				</td>
+				<td>
+					<%= link_to "Show All Groups", groups_url, class: "button" %>
+				</td>
+			</tr>
+		</table>
 	</nav>
 	<div id="todays-tasks">
 		<% if current_user %>
