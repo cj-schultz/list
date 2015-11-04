@@ -73,9 +73,7 @@ ul#tasks {
 }
 
 article#task {
-  margin-bottom: 1.5em;
-  padding-bottom: 1.5em;
-  border-bottom: 1px dotted $subdued-color;
+  padding-bottom: 15px;
 
   p {
     color: darken($secondary-text-color, 10%);

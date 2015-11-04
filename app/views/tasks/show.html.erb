@@ -1,4 +1,4 @@
-<h1><%= @task.title %> in <%= link_to @group.title, group_tasks_path(@group) %></h1>
+<h1><%= @task.title %> in <%= link_to @group.title, group_tasks_path(@group), class: 'link' %></h1>
 
 <article id="task">
 	<p><%= @task.description %></p>	
@@ -15,6 +15,6 @@
 </article>
 
 <footer>
-  <%= link_to 'Edit Task', edit_group_task_path(@group, @task), class: 'button' %>
-  <%= link_to 'Delete Task', group_task_path(@group, @task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+  <%= link_to 'Edit Task', edit_group_task_path(@group, @task), class: 'submit-button' %>
+  <%= link_to 'Delete Task', group_task_path(@group, @task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'submit-button' %>
 </footer>

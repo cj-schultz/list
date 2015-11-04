@@ -16,16 +16,22 @@ a {
   text-decoration: underline;
 }
 
-a:link,
+.link,
 a:visited {
   color: $primary-link-color;
 }
 
-a:hover,
-a:active {
-  text-decoration: none;
-  color: $secondary-link-color;
-  background: $secondary-background-color;
+.link:hover {
+	color: lighten($primary-link-color, 40%);
+}
+
+.today-link,
+a:visited {
+  color: $primary-link-color;
+}
+
+.today-link:hover {
+	color: darken($primary-link-color, 15%);
 }
 
 td.red {

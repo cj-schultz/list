@@ -15,6 +15,7 @@ class TasksController < ApplicationController
   def new
     @group = Group.find(params[:group_id])
     @task = Task.new
+    session[:previous_url] = request.referer
   end
 
   def create 
@@ -31,6 +32,7 @@ class TasksController < ApplicationController
   def edit
     @group = Group.find(params[:group_id])
     @task = Task.find(params[:id])
+    session[:previous_url] = request.referer
   end
 
   def update

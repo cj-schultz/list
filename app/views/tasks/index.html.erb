@@ -2,22 +2,8 @@
   <h1>
     <%= @group.title %>
   </h1>
-  <%= link_to "Add Task", new_group_task_path(@group), class: 'button' %>
+  <%= link_to "Add Task", new_group_task_path(@group), class: 'submit-button' %>
 <header>
-
-<!-- <table id="tasks">
-  <% if @pending_tasks.count > 0 %>
-    <div class="pending">
-      <th> <%= pluralize @pending_tasks.count, "Pending Task" %> </th>
-
-      <% @pending_tasks.each do |task| %>
-        <tr> <td><%= task.title %> </td></tr>
-      <% end %>
-
-      <th> new </th>
-    </div>
-  <% end %>
-</table> -->
 
 <% if @pending_tasks.count > 0 %>
   <h2> <%= pluralize @pending_tasks.count, "Pending Task" %> </h2>
@@ -29,7 +15,7 @@
           <article class="task">
             <header>
               <h2>
-                <%= link_to task.title, group_task_path(@group, task) %> <%= check_box_tag "task_ids[]", task.id %>
+                <%= link_to task.title, group_task_path(@group, task), class: 'link' %> <%= check_box_tag "task_ids[]", task.id %>
               </h2>
             </header>
             <p>
@@ -64,7 +50,7 @@
         <article class="task">
           <header>
             <h2>
-              <%= link_to task.title, group_task_path(@group, task) %>
+              <%= link_to task.title, group_task_path(@group, task), class: 'link' %>
             </h2>
           </header>
           <p>

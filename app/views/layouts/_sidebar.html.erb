@@ -3,13 +3,13 @@
 		<table>
 			<tr>
 				<td>
-					<%= link_to "New Task", new_group_url, class: "button" %>
+					<%= link_to "New Task", new_group_url, class: 'submit-button' %>
 				</td>
 				<td>
-					<%= link_to "New Group", new_group_url, class: "button" %>
+					<%= link_to "New Group", new_group_url, class: 'submit-button' %>
 				</td>
 				<td>
-					<%= link_to "Show All Groups", groups_url, class: "button" %>
+					<%= link_to "Show All Groups", groups_url, class: 'submit-button' %>
 				</td>
 			</tr>
 		</table>
@@ -21,7 +21,7 @@
 			<% if todays_tasks.size > 0 %>			
 				<ul>
 					<% todays_tasks.each do |task| %>
-						<li><%= link_to task.title, group_task_path(task.group, task) %> (<%= task.group.title %>)</li>
+						<li><%= link_to task.title, group_task_path(task.group, task), class: 'today-link' %> (<%= task.group.title %>)</li>
 					<% end %>
 				</ul>
 			<% else %>

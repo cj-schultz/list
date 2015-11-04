@@ -25,6 +25,7 @@
       <% else %>
         <%= f.submit "Update Account" %>
       <% end %>
+      <%= link_to "Cancel", session[:previous_url], class: 'button' %>
     </p>
   </fieldset>
 <% end %>

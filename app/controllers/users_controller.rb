@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
 	def new
 		@user = User.new
+    session[:previous_url] = request.referer
 	end
 
   def create
@@ -25,6 +26,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    session[:previous_url] = request.referer
   end
 
   def update

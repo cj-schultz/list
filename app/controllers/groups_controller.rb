@@ -12,6 +12,7 @@ class GroupsController < ApplicationController
 
   def edit
     @group = @user_groups.find(params[:id])
+    session[:previous_url] = request.referer
   end
 
   def update
