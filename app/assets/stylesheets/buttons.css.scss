@@ -1,29 +1,29 @@
 @import "colors";
 
 .edit-button {
-    background: asset_url("pencil.png") no-repeat;
-    background-size: contain;
+  background: asset_url("pencil.png") no-repeat;
+  background-size: contain;
 
-    cursor:pointer;
-    border: none;
-    width:25px;
-    height:25px;
-    margin-left: 5px;
-    float: right;
+  cursor:pointer;
+  border: none;
+  width:25px;
+  height:25px;
+  margin-left: 5px;
+  float: right;
 }
 
 .edit-button:hover,
 .edit-button:active {
-	  background: asset_url("pencil.png") no-repeat;
-    background-size: 20px 20px;
-    background-position:center;
+  background: asset_url("pencil.png") no-repeat;
+  background-size: 20px 20px;
+  background-position:center;
 
-    cursor:pointer;
-    border: none;
-    width:25px;
-    height:25px;
-    margin-left: 5px;
-    float: right;
+  cursor:pointer;
+  border: none;
+  width:25px;
+  height:25px;
+  margin-left: 5px;
+  float: right;
 }
 
 .delete-button {
@@ -40,16 +40,16 @@
 
 .delete-button:hover,
 .delete-button:active {
-	  background: asset_url("delete.png") no-repeat;
-    background-size: 20px 20px;
-    background-position:center;
+  background: asset_url("delete.png") no-repeat;
+  background-size: 20px 20px;
+  background-position:center;
 
-    cursor:pointer;
-    border: none;
-    width:22px;
-    height:25px;
-    margin-left: 5px;
-    float: right;
+  cursor:pointer;
+  border: none;
+  width:22px;
+  height:25px;
+  margin-left: 5px;
+  float: right;
 }
 
 .submit-button {

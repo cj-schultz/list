@@ -106,33 +106,6 @@ aside#sidebar {
   width: 200px;
   float: left;
 
-  h1 {
-    color: $secondary-text-color;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  a,
-  a:link,
-  a:visited {
-    text-decoration: none;
-  }
-
-  nav {
-    table {
-      margin: 0;
-      padding: 0;
-
-      td{
-        a:hover {
-          background-color: $accent-color;
-          color: #000;
-        }
-      }
-    }
-  }
-
   div#todays-tasks {
     width: 420px;
     margin: 20px 10px 10px 0;
