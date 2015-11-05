@@ -21,7 +21,10 @@
 			<% if todays_tasks.size > 0 %>			
 				<ul>
 					<% todays_tasks.each do |task| %>
-						<li><%= link_to task.title, group_task_path(task.group, task), class: 'today-link' %> (<%= task.group.title %>)</li>
+						<li>
+							<%= link_to task.title, group_task_path(task.group, task), class: 'today-link' %> (<%= task.group.title %>)
+							<%= link_to "", group_task_path(task.group, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
+         			<%= link_to "", edit_group_task_path(task.group, task), class: 'edit-button' %></li>
 					<% end %>
 				</ul>
 			<% else %>
