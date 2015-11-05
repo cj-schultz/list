@@ -1,7 +1,7 @@
 @import "colors";
 
 .edit-button {
-    background: url("pencil.png") no-repeat;
+    background: asset_url("pencil.png") no-repeat;
     background-size: contain;
 
     cursor:pointer;
@@ -14,7 +14,7 @@
 
 .edit-button:hover,
 .edit-button:active {
-	  background: url("pencil.png") no-repeat;
+	  background: asset_url("pencil.png") no-repeat;
     background-size: 20px 20px;
     background-position:center;
 
@@ -27,7 +27,7 @@
 }
 
 .delete-button {
-	background: url("delete.png") no-repeat;
+	background: asset_url("delete.png") no-repeat;
   background-size: contain;
 
   cursor:pointer;
@@ -40,7 +40,7 @@
 
 .delete-button:hover,
 .delete-button:active {
-	  background: url("delete.png") no-repeat;
+	  background: asset_url("delete.png") no-repeat;
     background-size: 20px 20px;
     background-position:center;
 
