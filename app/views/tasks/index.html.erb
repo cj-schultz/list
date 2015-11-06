@@ -2,7 +2,7 @@
   <h1>
     <%= @group.title %>
   </h1>
-  <%= link_to "Add Task", new_group_task_path(@group), class: 'submit-button' %>
+  <%= link_to "New Task", new_group_task_path(@group), class: 'submit-button' %>
 <header>
 
 <% if @pending_tasks.count > 0 %>
