@@ -12,6 +12,10 @@ class Task < ActiveRecord::Base
   	due_date == Date.today
   end
 
+  def complete?
+    complete
+  end
+
   def overdue?
   	due_date < Date.today
   end

@@ -64,7 +64,25 @@
   text-align: center;
   &:hover {
     background-color: $subdued-color;
-    text-shadow: 0;
+    text-decoration: underline;
+  }
+}
+
+.submit-today-button {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 60px;
+  height: 22px;
+  float: right;
+  line-height: normal;
+  display: inline-block;
+  border: 1px $subdued-color solid;
+  background-color: white;
+  border-radius: 4px;
+  padding: 4px 4px;
+  text-align: center;
+  &:hover {
+    background-color: $subdued-color;
     text-decoration: underline;
   }
 }

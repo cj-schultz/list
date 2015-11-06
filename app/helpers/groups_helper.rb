@@ -2,7 +2,7 @@ module GroupsHelper
 	def get_todays_tasks(group)
 		tasks = []
   	group.tasks.each do |task|
-  		if task.due_today?
+  		if task.due_today? && !task.complete?
   			tasks << task
   		end
   	end

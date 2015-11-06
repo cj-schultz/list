@@ -63,6 +63,15 @@ class TasksController < ApplicationController
     redirect_to group_tasks_path(@group), notice: "Tasks successfully marked as complete"
   end
 
+  def complete_single
+    @group = Group.find(params[:group_id])
+    @task = Task.find(params[:task_id])
+
+    @task.update(complete: true)
+
+    redirect_to root_url, notice: "#{@task.title} completed"
+  end
+
 private
   def task_params
     params.require(:task).permit(:title, :due_date, :description)
