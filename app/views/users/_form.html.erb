@@ -11,7 +11,7 @@
         <%= f.email_field :email, size: 40 %>
       </li>
       <li class="required">
-        <%= f.label :password, "Password - must be more than 5 characters long" %>
+        <%= f.label :password, "Password (must be more than 5 characters long)" %>
         <%= f.password_field :password, size: 40 %>
       </li>
       <li class="required">
@@ -25,7 +25,7 @@
       <% else %>
         <%= f.submit "Update Account" %>
       <% end %>
-      <%= link_to "Cancel", session[:previous_url], class: 'button' %>
+      <%= link_to "Cancel", session[:previous_url], class: 'submit-button' %>
     </p>
   </fieldset>
 <% end %>
