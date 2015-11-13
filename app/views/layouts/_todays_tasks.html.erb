@@ -5,7 +5,7 @@
 		<ul>
 			<% todays_tasks.each do |task| %>
 				<li>
-					<%= link_to "Done", "/groups/#{task.group.id}/complete/#{task.id}", method: :put, class: 'submit-today-button' %>
+					<%= link_to "", "/groups/#{task.group.id}/complete/#{task.id}", method: :put, class: 'checkmark-button' %>
 					<%= link_to task.title, group_task_path(task.group, task), class: 'today-link' %>
 					<%= link_to "", group_task_path(task.group, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
    			<%= link_to "", edit_group_task_path(task.group, task), class: 'edit-button' %>

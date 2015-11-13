@@ -134,7 +134,7 @@ aside#sidebar {
     width: 420px;
     margin: 10px 10px 10px 0;
     padding: 10px 15px;
-    background-image: image-url("overdue_background.jpeg");
+    background-image: image-url("overdue_background.jpg");
     border: 0;
     box-shadow: #aaa 0 0 8px;
 
@@ -146,10 +146,6 @@ aside#sidebar {
         padding-bottom: 10px;
         border-bottom: 1px dotted black;
       }
-    }
-
-    h3 {
-      color: #0099FF;
     }
 
     h3.none {

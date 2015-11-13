@@ -8,7 +8,11 @@
       </li>
     </ol>
     <p>
-      <%= f.submit %>
+      <% if @group.new_record? %>
+        <%= f.submit "Create" %>
+      <% else %>
+        <%= f.submit "Update" %>
+      <% end %>
       <%= link_to "Cancel", session[:previous_url], class: 'submit-button' %>
     </p>
   </fieldset>

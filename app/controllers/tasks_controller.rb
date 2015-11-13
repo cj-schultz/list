@@ -23,7 +23,7 @@ class TasksController < ApplicationController
     @task = @group.tasks.new(task_params)
     @task.complete = false
     if @task.save
-      redirect_to group_task_path(@group, @task), notice: "Task successfully created"
+      redirect_to session[:previous_url], notice: "Task successfully created"
     else
       render :new
     end
@@ -39,7 +39,7 @@ class TasksController < ApplicationController
     @group = Group.find(params[:group_id])
     @task = Task.find(params[:id])
     if @task.update(task_params)
-      redirect_to group_task_path(@group, @task), notice: "Task successfully updated"
+      redirect_to session[:previous_url], notice: "Task successfully updated"
     else
       render :edit
     end
@@ -52,24 +52,13 @@ class TasksController < ApplicationController
     redirect_to group_tasks_path(@group), alert: "Task successfully deleted"
   end
 
-  def complete
-    @group = Group.find(params[:group_id])
-    task_ids = params[:task_ids]
-    
-    task_ids.each  do |task_id|
-      @group.tasks.find(task_id).update(complete: true)
-    end
-
-    redirect_to group_tasks_path(@group), notice: "Tasks successfully marked as complete"
-  end
-
   def complete_single
     @group = Group.find(params[:group_id])
     @task = Task.find(params[:task_id])
 
     @task.update(complete: true)
 
-    redirect_to root_url, notice: "#{@task.title} completed"
+    redirect_to request.referer, notice: "#{@task.title} completed"
   end
 
 private
