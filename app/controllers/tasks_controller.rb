@@ -66,6 +66,3 @@ private
     params.require(:task).permit(:title, :due_date, :description)
   end
 end
-
-
-# TODO: format time to show hours as AM and PM, and just the date if the time is not specified
