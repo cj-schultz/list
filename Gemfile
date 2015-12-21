@@ -45,6 +45,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# builds calendar
+gem "watu_table_builder", :require => "table_builder"
+
 group :test, :development do
   gem "test-unit"
   gem "minitest"

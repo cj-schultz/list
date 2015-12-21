@@ -99,12 +99,23 @@ div#wrapper {
         padding: 0 0 20px 0;
       }
     }
+
+    section#content-calendar{
+      width: 100%;
+    }
   }
 }
 
 aside#sidebar {
   width: 200px;
   float: left;
+
+  table#buttons {t
+  tr{
+    margin-left:auto; 
+    margin-right:auto;
+    }
+  }
 
   div#todays-tasks {
     width: 420px;

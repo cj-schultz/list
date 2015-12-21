@@ -1,0 +1,38 @@
+<!-- <div id="calendar">
+	<h2 id="month">
+		<%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
+    <%=h @date.strftime("%B %Y") %>
+    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
+  </h2>
+
+  <% calendar_for @tasks, :year => @date.year, :month => @date.month do |calendar| %>
+    <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+    <%= calendar.day(:day_method => :due_date) do |date, tasks| %>
+      <%= date.day %>
+      <ul>
+        <% tasks.each do |task| %>
+          <li><%= link_to (task.title), group_task_url(task.group, task) %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  <% end %>
+</div> -->
+<h2 id="month">
+		<%= link_to "<", calendar_url(@date.prev_month) %>
+    <%= @date.strftime("%B %Y") %>
+    <%= link_to ">", calendar_url(@date.next_month) %>
+</h2>
+
+<div id="calendar">
+	<%= calendar_for(@tasks, :year => @date.year, :month => @date.month) do |calendar| %>
+		<%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+		<% calendar.day(:day_method => :due_date) do |date, tasks| %>
+			<%= date.day %>
+			<ul>
+        <% tasks.each do |task| %>
+          <li><%= link_to (task.title), group_task_url(task.group, task) %></li>
+        <% end %>
+      </ul>
+		<% end %>
+	<% end %>
+</div>

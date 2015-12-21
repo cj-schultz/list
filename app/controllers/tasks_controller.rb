@@ -52,6 +52,11 @@ class TasksController < ApplicationController
     redirect_to group_tasks_path(@group), alert: "Task successfully deleted"
   end
 
+  def calendar
+    @date = Date.parse(params[:date])
+    @tasks = gather_month_tasks(@date.month)
+  end
+
   def complete_single
     @group = Group.find(params[:group_id])
     @task = Task.find(params[:task_id])

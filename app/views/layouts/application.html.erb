@@ -22,14 +22,18 @@
 	<%= render 'layouts/flashes' %>
 	
 	<div id="container">
-		<% if current_user %>
-			<section id="sidebar">
-				<%= render 'layouts/sidebar' %>
-			</section>
-		<% end %>
+	<% if request.fullpath.include?("/calendar") || !current_user %>
+		<section id="content-calendar">
+			<%= yield %>
+		</section>
+	<% else %>
+		<section id="sidebar">
+			<%= render 'layouts/sidebar' %>
+		</section>
 		<section id="content">
 			<%= yield %>
 		</section>
+	<% end %>
 	</div>
 </div>
 

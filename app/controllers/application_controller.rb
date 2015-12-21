@@ -10,11 +10,26 @@ private
     end
   end
 
+  def gather_month_tasks(month)
+    all_tasks = []
+
+    current_user.groups.all.each do |group|
+      group_tasks = group.tasks.all
+      group_tasks.each do |task|
+        if task.due_date.month > month - 1 && task.due_date.month < month + 1
+          all_tasks << task
+        end
+      end
+    end
+
+    all_tasks
+  end
+
   def current_user
 		@current_user ||= User.find(session[:user_id]) if session[:user_id]
 	end
 
-	helper_method :current_user
+	helper_method :current_user, :gather_all_tasks
 
   def require_correct_user
     @user = User.find(params[:id])
