@@ -11,6 +11,23 @@
 	  $(function() {
 	    $("#task_due_date").datepicker({ dateFormat: 'dd-mm-yy' });
 	  });
+
+	  window.onload = function(){
+		  document.getElementById("test-popup").onclick = myFunction;
+
+		  function myFunction() {
+		  	$("<div>").attr("id", "popup").addClass("popup").dialog({
+		  		height: 600,
+		  		width: 600,
+		  		modal: true,
+		  		buttons: {
+		  			Cancel: function() {
+		  				$(this).dialog("close");
+		  			}
+		  		}
+		  	})
+		  };
+		};
   </script>
   <%= csrf_meta_tags %>
 </head>
