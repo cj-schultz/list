@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   resources :users
   #put 'groups/:group_id/complete/tasks' => 'tasks#complete'
-  put 'groups/:group_id/complete/:task_id' => 'tasks#complete_single'
+  put 'groups/:group_id/complete/:task_id' => 'tasks#complete_single', as: "complete"
 	  
   resources :groups do
   	resources :tasks

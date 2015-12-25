@@ -1,8 +1,8 @@
 <header id="header">
   <h1>
     <%= @group.title %>
-    <%= link_to "", @group, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
-    <%= link_to "", edit_group_path(@group), class: 'edit-button' %>
+    <%= link_to "", @group, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button', title: 'Delete' %>
+    <%= link_to "", edit_group_path(@group), class: 'edit-button', title: 'Edit' %>
   </h1>
   <%= link_to "New Task", new_group_task_path(@group), class: 'submit-button' %>
 <header>
@@ -18,9 +18,9 @@
             <header>
               <h2>
                 <%= task.title %>
-                <%= link_to "", "/groups/#{@group.id}/complete/#{task.id}", method: :put, class: 'checkmark-button' %>
-                <%= link_to "", group_task_path(@group, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
-                <%= link_to "", edit_group_task_path(@group, task), class: 'edit-button' %>
+                <%= link_to "", "/groups/#{@group.id}/complete/#{task.id}", method: :put, class: 'checkmark-button', title: 'Complete task' %>
+                <%= link_to "", group_task_path(@group, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button', title: 'Delete' %>
+                <%= link_to "", edit_group_task_path(@group, task), class: 'edit-button', title: 'Edit' %>
               </h2>
             </header>
             <p>
@@ -55,8 +55,8 @@
           <header>
             <h2>
               <%= task.title %>
-              <%= link_to "", group_task_path(@group, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
-              <%= link_to "", edit_group_task_path(@group, task), class: 'edit-button' %>
+              <%= link_to "", group_task_path(@group, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button', title: 'Delete' %>
+              <%= link_to "", edit_group_task_path(@group, task), class: 'edit-button', title: 'Edit' %>
             </h2>
           </header>
           <p>

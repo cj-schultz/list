@@ -8,24 +8,74 @@
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script>
+  	// Datepicker
 	  $(function() {
 	    $("#task_due_date").datepicker({ dateFormat: 'dd-mm-yy' });
 	  });
 
+	  $(function() {
+    	$( document ).tooltip();
+  	});
+
+	  // Popup JS
 	  window.onload = function(){
-		  document.getElementById("test-popup").onclick = myFunction;
+		  // loop through all elements, add event listener
+		  var elements = document.getElementsByClassName("calendar-popup");
+		  for(var i=0; i<elements.length; i++){
+		  	elements[i].addEventListener("click", myFunction);
+		  }
 
 		  function myFunction() {
+		  	// gather all information
+		  	var id = $(this).data("id");
+		  	var title = $(this).data("title");
+		  	var due_date = $(this).data("due-date");
+		  	var description = $(this).data("description");
+		  	var group_id = $(this).data("group-id");
+		  	var complete = $(this).data("complete");
+		  	var complete_url = $(this).data("complete-url");
+		  	var delete_url = $(this).data("delete-url");
+		  	var edit_url = $(this).data("edit-url");
+
+		  	// Make dialog popup
 		  	$("<div>").attr("id", "popup").addClass("popup").dialog({
-		  		height: 600,
+		  		height: 400,
 		  		width: 600,
 		  		modal: true,
 		  		buttons: {
-		  			Cancel: function() {
+		  			Close: function() {
 		  				$(this).dialog("close");
 		  			}
 		  		}
 		  	})
+		  	// Format information
+		  	$(".ui-dialog-titlebar").hide();
+		  	var title_text = $("<p id='title'></p>").text(title);
+		  	var description_text = $("<p id='description'></p>").text(description);
+		  	var due_date_text = $("<p id='due-date'></p>").text("Due on " + due_date);
+		  	// creating buttons
+		  	var check_button = $("<a class='calendar-checkmark-button' title='Complete task' data-method='put' href=" + complete_url + " rel='nofollow'></a>");
+		  	var delete_button = $("<a class='calendar-delete-button' title='Delete' data-confirm='Are you sure?' data-method='delete' href=" + delete_url + " rel='nofollow'></a>");
+		  	var edit_button = $("<a class='calendar-edit-button' title='Edit' href=" + edit_url + "></a>");
+
+		  	var status, status_text;
+		  	if(complete){
+		  		status = "Complete";
+		  		status_text = $("<p id='status'></p>").text("Complete");
+		  	}else{
+		  		status = "Pending";
+		  		status_text = $("<p id='status'></p>").text("Pending");
+		  	}
+
+		  	$(".popup").append(title_text);
+		  	$(".popup").append(due_date_text);
+		  	$(".popup").append(status_text);
+		  	$(".popup").append(description_text);
+		  	$(".popup").append(edit_button);
+		  	$(".popup").append(delete_button);
+		  	if(!complete){
+		  		$(".popup").append(check_button);
+		  	}
 		  };
 		};
   </script>

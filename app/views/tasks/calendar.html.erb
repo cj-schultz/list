@@ -1,33 +1,8 @@
-<!-- <div id="calendar">
-	<h2 id="month">
-		<%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
-    <%=h @date.strftime("%B %Y") %>
-    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
-  </h2>
-
-  <% calendar_for @tasks, :year => @date.year, :month => @date.month do |calendar| %>
-    <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
-    <%= calendar.day(:day_method => :due_date) do |date, tasks| %>
-      <%= date.day %>
-      <ul>
-        <% tasks.each do |task| %>
-          <li><%= link_to (task.title), group_task_url(task.group, task) %></li>
-        <% end %>
-      </ul>
-    <% end %>
-  <% end %>
-</div> -->
 <h2 id="month">
 		<%= link_to "<", calendar_url(@date.prev_month) %>
     <%= @date.strftime("%B %Y") %>
     <%= link_to ">", calendar_url(@date.next_month) %>
 </h2>
-
-<h4>
-	<%= button_tag(type: 'button', id: 'test-popup', data: @tasks[2]) do %>
-  	<%= content_tag(:strong, "#{@tasks[2].title}")%>
-  <% end %>
-</h4>
 
 <div id="calendar">
 	<%= calendar_for(@tasks, :year => @date.year, :month => @date.month) do |calendar| %>
@@ -36,7 +11,11 @@
 			<%= date.day %>
 			<ul>
         <% tasks.each do |task| %>
-          <li><%= link_to (task.title), group_task_url(task.group, task) %></li>
+          <li>
+          	<%= button_tag(type: 'button', class: 'calendar-popup', data: {id: task.id, title: task.title, due_date: task.due_date.strftime("%B %e, %Y"), description: task.description, group_id: task.group, complete: task.complete, complete_url: complete_path(task.group, task), delete_url: group_task_path(task.group, task), edit_url: edit_group_task_path(task.group, task)}) do %>
+  						<%= content_tag(:strong, "#{task.title}")%>
+  					<% end %>
+          </li>
         <% end %>
       </ul>
 		<% end %>

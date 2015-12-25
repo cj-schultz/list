@@ -49,7 +49,14 @@ class TasksController < ApplicationController
     @group = Group.find(params[:group_id])
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to group_tasks_path(@group), alert: "Task successfully deleted"
+    redirect_to request.referer, alert: "Task successfully deleted"
+
+    # Might not need?    
+    # if request.referer.include?("/calendar")
+    #   redirect_to request.referer, alert: "Task successfully deleted"
+    # else
+    #   redirect_to group_tasks_path(@group), alert: "Task successfully deleted"
+    # end
   end
 
   def calendar

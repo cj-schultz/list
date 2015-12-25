@@ -7,10 +7,10 @@
 		<ul>
 			<% overdue_tasks.each do |task| %>
 				<li>
-					<%= link_to "", "/groups/#{task.group.id}/complete/#{task.id}", method: :put, class: 'checkmark-button' %>
+					<%= link_to "", "/groups/#{task.group.id}/complete/#{task.id}", method: :put, class: 'checkmark-button', title: 'Complete task' %>
 					<%= link_to task.title, group_task_path(task.group, task), class: 'today-link' %>
-					<%= link_to "", group_task_path(task.group, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
-   				<%= link_to "", edit_group_task_path(task.group, task), class: 'edit-button' %>
+					<%= link_to "", group_task_path(task.group, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button', title: 'Delete' %>
+   				<%= link_to "", edit_group_task_path(task.group, task), class: 'edit-button', title: 'Edit' %>
    			</li>
 			<% end %>
 		</ul>
