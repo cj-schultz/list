@@ -16,8 +16,9 @@ ol {
   line-height: 1.5em;
 }
 
-a {
+a:link {
   text-decoration: underline;
+  color: $primary-link-color;
 }
 
 .link,

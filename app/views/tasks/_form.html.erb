@@ -22,7 +22,7 @@
       <% else %>
         <%= f.submit "Update" %>
       <% end %>
-      <%= link_to "Cancel", group_tasks_path(@group), class: 'submit-button' %>
+      <%= link_to "Cancel", session[:previous_url], class: 'submit-button' %>
     </p>    
   </fieldset>
 <% end %>
